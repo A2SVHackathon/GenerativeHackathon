@@ -11,6 +11,7 @@ const hpp = require('hpp');
 const cors = require('cors');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
+const UserRouter = require("./routers/User");
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -55,6 +56,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Mount routers
 
 app.use(errorHandler);
+
+//use the user router
+
+app.use(UserRouter);
 
 const PORT = process.env.PORT || 5000;
 
