@@ -1,8 +1,10 @@
 const User = require("../models/User")
 const express = require("express");
+const axios = require("axios")
 require("dotenv").config();
 const OpenAI = require('openai');
 const router  = express()
+
 
 router.use(express.urlencoded(true));
 

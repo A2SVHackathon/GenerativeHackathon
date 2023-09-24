@@ -5,9 +5,11 @@
 		"phone": "(111) 111-1111",
 		"email": "enroll@devworks.com",
 		"address": "233 Bay State Rd Boston MA 02215",
-		"role": "user",
+		"skills": ["Web Development", "UI/UX", "Business"],
+		"dob": 1681824811584,
+		"department": "Software Engeenering",
+		"university": "Addis Ababa Science And Technology",
 		"password": "123456"
-		
 	},
 	{
 		"name": "Abel Getahun",
@@ -16,9 +18,11 @@
 		"phone": "(222) 222-2222",
 		"email": "enroll@moderntech.com",
 		"address": "220 Pawtucket St, Lowell, MA 01854",
-		"role": "publisher",
+		"skills": ["Web Development", "UI/UX", "Mobile Development"],
+		"dob": 1681824811584,
+		"department": "Software Engeenering",
+		"university": "Addis Ababa Science And Technology",
 		"password": "123456"
-		
 	},
 	{
 		"name": "Abel Abebe",
@@ -27,9 +31,11 @@
 		"phone": "(333) 333-3333",
 		"email": "enroll@codemasters.com",
 		"address": "85 South Prospect Street Burlington VT 05405",
-		"role": "user",
+		"skills": ["Web Development", "Data Science", "Business"],
+		"dob": 1681824811584,
+		"department": "Software Engeenering",
+		"university": "Addis Ababa Science And Technology",
 		"password": "123456"
-		
 	},
 	{
 		"name": "Aklile Seyoum",
@@ -38,7 +44,15 @@
 		"phone": "(444) 444-4444",
 		"email": "enroll@devcentral.com",
 		"address": "45 Upper College Rd Kingston RI 02881",
-		"role": "publisher",
+		"skills": [
+			"Mobile Development",
+			"Web Development",
+			"Data Science",
+			"Business"
+		],
+		"dob": 1681824811584,
+		"department": "Software Engeenering",
+		"university": "Addis Ababa Science And Technology",
 		"password": "123456"
 	}
 ]
