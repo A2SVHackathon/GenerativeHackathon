@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/A2SV-hacathon-Zenith/Zenith_work#readme",
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
     "axios": "^1.5.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
@@ -30,6 +31,7 @@
     "morgan": "^1.10.0",
     "node-geocoder": "^4.2.0",
     "nodemon": "^2.0.22",
+    "openai": "^4.10.0",
     "slugify": "^1.6.6"
   }
 }
