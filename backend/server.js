@@ -14,7 +14,9 @@ dotenv.config({path: './config/config.env'})
 // route files
 const users = require('./routes/users')
 const auth = require('./routes/auth')
+const translate = require("./routes/translator")
 const tasks = require('./routes/tasks')
+
 
 // connect to database
 
@@ -22,9 +24,8 @@ connectDB()
 
 const app = express()
 
-
 app.use(cors())
-
+// app.use(check)
 // Body parser
 app.use(express.json())
 
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/api/v1/users', users)
 app.use('/api/v1/auth', auth)
+app.use("/api/v1/translator",translate)
 app.use('/api/v1/tasks', tasks)
 
 
