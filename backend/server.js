@@ -16,12 +16,13 @@ const users = require('./routes/users')
 const auth = require('./routes/auth')
 const translate = require("./routes/translator")
 const tasks = require('./routes/tasks')
+const photos = require('./routes/photo')
 const assistant = require('./routes/assist')
 
 
 // connect to database
 
-// connectDB()
+connectDB()
 
 const app = express()
 
@@ -47,6 +48,7 @@ app.use('/api/v1/users', users)
 app.use('/api/v1/auth', auth)
 app.use("/api/v1/translator",translate)
 app.use('/api/v1/tasks', tasks)
+app.use('/api/v1/photo', photos)
 app.use('/api/v1/assistant', assistant)
 
 
