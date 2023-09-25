@@ -143,7 +143,7 @@ exports.CreateTranslation = asyncHandler(async(req,res,next)=>{
     }
 
     if(toLanguage in language_dict){
-        const {text} = await translate(toBeTranslated, {to:toLanguage})
+        const {text} = await translate(toBeTranslated, {to: language_dict[toLanguage]})
     
         res.status(200).json({success:true, data: text});
     }else{

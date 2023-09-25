@@ -19,6 +19,7 @@
   "homepage": "https://github.com/A2SV-hacathon-Zenith/Zenith_work#readme",
   "dependencies": {
     "@vitalets/google-translate-api": "^9.2.0",
+    "axios": "^1.5.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
