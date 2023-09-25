@@ -16,6 +16,7 @@ const users = require('./routes/users')
 const auth = require('./routes/auth')
 const translate = require("./routes/translator")
 const tasks = require('./routes/tasks')
+const photos = require('./routes/photo')
 
 
 // connect to database
@@ -46,6 +47,7 @@ app.use('/api/v1/users', users)
 app.use('/api/v1/auth', auth)
 app.use("/api/v1/translator",translate)
 app.use('/api/v1/tasks', tasks)
+app.use('/api/v1/photo', photos)
 
 
 // error handler middleware

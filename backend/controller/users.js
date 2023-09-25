@@ -1,7 +1,6 @@
 const User = require('../models/User')
 const ErrorResponse = require('../utils/errorResponse')
 const asyncHandler = require('../middleware/async')
-// const Jobs = require('../models/Jobs')
 const path = require('path')
 
 // @desc Get all users
