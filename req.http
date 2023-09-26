@@ -1,53 +1,50 @@
 @host=http://localhost:5000
 
-# POST {{host}}/api/v1/tasks/create_plan
-# Content-Type: application/json
+POST {{host}}/api/v1/tasks/create_plan
+Content-Type: application/json
 
-# {
-#     "duration": "2-4 months",
-#     "destinations": [
-#         "Botswana",
-#         "Democratic Republic of the Congo"
-#     ],
-#     "interests": [
-#         "Hiking",
-#         "Trekking",
-#         "Music",
-#         "Festivals"
-#     ],
-#     "budget": "$2000",
-#     "activities": [
-#         "Hot Air Ballooning",
-#         "Parasailing",
-#         "Wildlife Safaris",
-#         "Cultural Festivals",
-#         "Historical Landmarks",
-#         "Beach Relaxation",
-#         "Adventure Sports"
-#     ],
-#     "travel_companions": [
-#         "Digital Nomads",
-#         "Culture Enthusiasts",
-#         "Language Exchange Partners"
-#     ],
-#     "dietary_preferences": "Flexible/No Specific Preference",
-#     "transportation": "Motorcycle/Scooter",
-#     "accommodations": [
-#         "Hotel",
-#         "Motel"
-#     ],
-#     "adventure_activities": [
-#         "Hiking",
-#         "Rock Climbing",
-#         "White Water Rafting",
-#         "Zip-lining",
-#         "Bungee Jumping"
-#     ],
-#     "pace": "Balanced mix of fast-paced adventure and relaxation",
-#     "cultural_exploration": "Interested in learning about local culture, history, art",
-#     "landmarks": [],
-#     "travel_style": "Variety of off-the-beaten-path and iconic tourist spots"
-# }
+{
+    "duration": "2-4 months",
+    "destinations": "south africa",
+    "interests": [
+        "Hiking",
+        "Trekking",
+        "Music",
+        "Festivals"
+    ],
+    "budget": "$2000",
+    "activities": [
+        "Hot Air Ballooning",
+        "Parasailing",
+        "Wildlife Safaris",
+        "Cultural Festivals",
+        "Historical Landmarks",
+        "Beach Relaxation",
+        "Adventure Sports"
+    ],
+    "travel_companions": [
+        "Digital Nomads",
+        "Culture Enthusiasts",
+        "Language Exchange Partners"
+    ],
+    "dietary_preferences": "Flexible/No Specific Preference",
+    "transportation": "Motorcycle/Scooter",
+    "accommodations": [
+        "Hotel",
+        "Motel"
+    ],
+    "adventure_activities": [
+        "Hiking",
+        "Rock Climbing",
+        "White Water Rafting",
+        "Zip-lining",
+        "Bungee Jumping"
+    ],
+    "pace": "Balanced mix of fast-paced adventure and relaxation",
+    "cultural_exploration": "Interested in learning about local culture, history, art",
+    "landmarks": [],
+    "travel_style": "Variety of off-the-beaten-path and iconic tourist spots"
+}
 
 # { 
 #     "destination": "Ethiopia",
@@ -66,9 +63,9 @@
 #     "travel_style": "comfortable"
 # }
 
-POST {{host}}/api/v1/tasks/ask
-Content-Type: application/json
+# POST {{host}}/api/v1/tasks/ask
+# Content-Type: application/json
 
-{
-    "prompt" : "Lalibela"
-}
+# {
+#     "prompt" : "Lalibela"
+# }

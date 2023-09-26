@@ -54,16 +54,7 @@ exports.createPlan = asyncHandler(async (req, res) => {
   So I want you to provide me the best travel plan for my upcoming adventure. can you list the days and tasks with this format on the message part.
   I want you to respond it using json format if successful respond only on the below format nothing more nothing less.
   
-  "days": [
-      {
-          "date": "Day 1",
-          "tasks": [
-              {
-                  "time": "9:00 AM",
-                  "taskName": "Arrive in Algeria",
-                  "description": "Check into hotel and rest"
-              },
-  `
+  Create a valid JSON array of objects "days": [ \n { \n \"date\": "\Day 1\", \n "\tasks\": [ \n { \n \"time\": \"9:00 AM\", \n \"taskName\": \"Arrive in Algeria\", \n \"description\": \"Check into hotel and rest\" \n }, \n ] \n }, `
 
   try {
     if (prompt == null) {
