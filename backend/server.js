@@ -22,7 +22,7 @@ const assistant = require('./routes/assist')
 
 // connect to database
 
-connectDB()
+// connectDB()
 
 const app = express()
 

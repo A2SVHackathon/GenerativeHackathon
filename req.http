@@ -2,20 +2,66 @@
 
 POST {{host}}/api/v1/tasks/create_plan
 Content-Type: application/json
- 
-{ 
-    "destination": "Ethiopia",
-    "duration": "3 days",
-    "interests": "cities, beaches, mountains",
-    "budget": "0 BIRR",
-    "activities": "safari, hiking, swimming",
-    "travel_companions": "freinds",
-    "dietary_preferences": "vegetarian",
-    "transportation": "car",
-    "accommodation": "motel",
-    "adventure_activities": "hiking, swimming",
-    "pace": "fast",
-    "cultural_exploration": "high",
-    "specific_landmarks": "axum, lalibela, gondar",
-    "travel_style": "comfortable"
+
+{
+    "duration": "2-4 months",
+    "destinations": [
+        "Botswana",
+        "Democratic Republic of the Congo"
+    ],
+    "interests": [
+        "Hiking",
+        "Trekking",
+        "Music",
+        "Festivals"
+    ],
+    "budget": "$2000",
+    "activities": [
+        "Hot Air Ballooning",
+        "Parasailing",
+        "Wildlife Safaris",
+        "Cultural Festivals",
+        "Historical Landmarks",
+        "Beach Relaxation",
+        "Adventure Sports"
+    ],
+    "travel_companions": [
+        "Digital Nomads",
+        "Culture Enthusiasts",
+        "Language Exchange Partners"
+    ],
+    "dietary_preferences": "Flexible/No Specific Preference",
+    "transportation": "Motorcycle/Scooter",
+    "accommodations": [
+        "Hotel",
+        "Motel"
+    ],
+    "adventure_activities": [
+        "Hiking",
+        "Rock Climbing",
+        "White Water Rafting",
+        "Zip-lining",
+        "Bungee Jumping"
+    ],
+    "pace": "Balanced mix of fast-paced adventure and relaxation",
+    "cultural_exploration": "Interested in learning about local culture, history, art",
+    "landmarks": [],
+    "travel_style": "Variety of off-the-beaten-path and iconic tourist spots"
 }
+
+# { 
+#     "destination": "Ethiopia",
+#     "duration": "3 days",
+#     "interests": "cities, beaches, mountains",
+#     "budget": "23000000 BIRR",
+#     "activities": "safari, hiking, swimming",
+#     "travel_companions": "freinds",
+#     "dietary_preferences": "vegetarian",
+#     "transportation": "car",
+#     "accommodation": "motel",
+#     "adventure_activities": "hiking, swimming",
+#     "pace": "fast",
+#     "cultural_exploration": "high",
+#     "specific_landmarks": "axum, lalibela, gondar",
+#     "travel_style": "comfortable"
+# }
