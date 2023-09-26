@@ -41,7 +41,13 @@ exports.askAboutSites = asyncHandler(async (req, res) => {
 // @access public
 exports.createPlan = asyncHandler(async (req, res) => {
   const request = req.body;
-  const prompt = `I have some exciting plans for my upcoming adventure, and I can't wait to make it all happen. First off, I've decided to explore ${request.destination} and immerse myself in the unique culture and attractions there for ${request.duration}.
+  const dest = ''
+
+  for (let i = 0; i < request.destination.length; i++) {
+    dest += request.destination[i] + ' '
+  }
+
+  const prompt = `I have some exciting plans for my upcoming adventure, and I can't wait to make it all happen. First off, I've decided to explore ${dest} and immerse myself in the unique culture and attractions there for ${request.duration}.
   When it comes to what I'm most interested in, I have a soft spot for ${request.interests}. That could be the energy of bustling cities, the tranquility of natural wonders, or a perfect blend of both.        
   Now, let's talk about the budget. I'm keeping it in mind, and I'm have a budget of ${request.budget}. And as for activities, I'm eager to experience ${request.activities}, whether that means wildlife safaris, cultural festivals,
   historical landmarks, beach relaxation, or adventure sports. As for my travel companions, I might go ${request.travel_companions}, and I'm still deciding. My dietary preferences? Well, I have some, and it's ${request.dietary_preferences}.
@@ -54,7 +60,7 @@ exports.createPlan = asyncHandler(async (req, res) => {
   So I want you to provide me the best travel plan for my upcoming adventure. can you list the days and tasks with this format on the message part.
   I want you to respond it using json format if successful respond only on the below format nothing more nothing less.
   
-  Create a valid JSON array of objects "days": [ \n { \n \"date\": "\Day 1\", \n "\tasks\": [ \n { \n \"time\": \"9:00 AM\", \n \"taskName\": \"Arrive in Algeria\", \n \"description\": \"Check into hotel and rest\" \n }, \n ] \n }, `
+  respond with a valid JSON array of objects like this format \"days\": [ \n { \n \"date\": "\Day 1\", \n "\tasks\": [ \n { \n \"time\": \"time\", \n \"taskName\": \"name of the task\", \n \"description\": \"description for the task\" \n }, \n ] \n }, `
 
   try {
     if (prompt == null) {
