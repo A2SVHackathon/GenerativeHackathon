@@ -16,17 +16,8 @@ const openai = new OpenAI({
 // @route POST /api/v1/tasks/ask
 // @access public
 exports.askAboutSites = asyncHandler(async (req, res) => {
-  const prompt = "\"" +req.body.prompt + `\"If my question in quotes is not related to travel sites, tourism, or travel only
-  want you to respond with json format with success false and data empty. if not can you list location. what it is and why i should visit it.
-  who made it and when if applicable. what is the history behind it if applicable. what is the best time to visit it.
-  I want you to respond it using json format only like this nothing more nothing less. 
-  {
-    location: "location",
-    description: "description",
-    place_to_visit: "place_to_visit",
-    history: "history",
-  }
-  `
+  const prompt = "\"" +req.body.prompt + `\" tell me about this location. what it is and why i should visit it.
+  who made it and when if applicable. what is the history behind it if applicable. what is the best time to visit it. `
   
   if (prompt == null) {
     return next(new ErrorResponse(`Empty prompt was entered`, 404))
@@ -37,10 +28,10 @@ exports.askAboutSites = asyncHandler(async (req, res) => {
       model: 'gpt-3.5-turbo',
     });
 
-    const jsonResponse = JSON.parse(completion.choices[0].message.content);
+    const data = completion.choices[0].message.content
 
     res.status(200).json({
-      jsonResponse
+      data
     });
 })
 
