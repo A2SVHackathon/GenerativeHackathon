@@ -43,8 +43,8 @@ exports.createPlan = asyncHandler(async (req, res) => {
   const request = req.body;
   let dest = ''
 
-  for (let i = 0; i < request.destinations.length; i++) {
-    dest += request.destinations[i] + ' '
+  for (let i = 0; i < request.destination.length; i++) {
+    dest += request.destination[i] + ' '
   }
 
   const prompt = `I have some exciting plans for my upcoming adventure, and I can't wait to make it all happen. First off, I've decided to explore ${dest} and immerse myself in the unique culture and attractions there for ${request.duration}.
