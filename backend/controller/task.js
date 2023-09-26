@@ -47,7 +47,7 @@ exports.createPlan = asyncHandler(async (req, res) => {
   const request = req.body;
   const prompt = `I have some exciting plans for my upcoming adventure, and I can't wait to make it all happen. First off, I've decided to explore ${request.destination} and immerse myself in the unique culture and attractions there for ${request.duration}.
   When it comes to what I'm most interested in, I have a soft spot for ${request.interests}. That could be the energy of bustling cities, the tranquility of natural wonders, or a perfect blend of both.        
-  Now, let's talk about the budget. I'm keeping it in mind, and I'm open to ${request.budget} options. And as for activities, I'm eager to experience ${request.activities}, whether that means wildlife safaris, cultural festivals,
+  Now, let's talk about the budget. I'm keeping it in mind, and I'm have a budget of ${request.budget}. And as for activities, I'm eager to experience ${request.activities}, whether that means wildlife safaris, cultural festivals,
   historical landmarks, beach relaxation, or adventure sports. As for my travel companions, I might go ${request.travel_companions}, and I'm still deciding. My dietary preferences? Well, I have some, and it's ${request.dietary_preferences}.
   I want my culinary experiences to be top-notch. In terms of transportation, I'm thinking of relying on ${request.transportation}. It just feels like the right fit for me. And when it comes to accommodations, I'm leaning towards ${request.accommodation} for a comfortable stay.
   Adventure is definitely on my radar. Whether it's hiking, snorkeling, or zip-lining, I'm up for the challenge, so you can count me in for ${request.adventure_activities}.
@@ -55,10 +55,19 @@ exports.createPlan = asyncHandler(async (req, res) => {
   Cultural exploration is a big part of what I'm looking forward to. Count me in for learning about local culture, history, art, or all of the above (${request.cultural_exploration}).
   If there are specific landmarks or attractions in mind, I've got a few favorites like ${request.specific_landmarks}. But I'm also open to suggestions and hidden gems.
   When it comes to travel style, I'm all about variety. Let's explore off-the-beaten-path destinations, iconic tourist spots, and find that perfect mix (${request.travel_style}).
-  So I want you to provide me the best travel plan for my upcoming adventure. can you list the days and tasks with times if applicable that i have to do in my stay.
-  I want you to respond it using json format.`
+  So I want you to provide me the best travel plan for my upcoming adventure. can you list the days and tasks with this format on the message part.
   
-  
+  "days": [
+      {
+          "date": "Day 1",
+          "tasks": [
+              {
+                  "time": "9:00 AM",
+                  "taskName": "Arrive in Algeria",
+                  "description": "Check into hotel and rest"
+              },
+  I want you to respond it using json format if successful respond only on the above format. `
+   
   try {
     if (prompt == null) {
       throw new Error("Uh oh, no prompt was provided");
@@ -69,7 +78,7 @@ exports.createPlan = asyncHandler(async (req, res) => {
       });
 
     const jsonResponse = JSON.parse(completion.choices[0].message.content);
-
+    
     return res.status(200).json({
       success: true,
       message: jsonResponse

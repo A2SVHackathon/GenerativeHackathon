@@ -1,0 +1,21 @@
+@host=http://localhost:5000
+
+POST {{host}}/api/v1/tasks/create_plan
+Content-Type: application/json
+ 
+{ 
+    "destination": "Ethiopia",
+    "duration": "3 days",
+    "interests": "cities, beaches, mountains",
+    "budget": "0 BIRR",
+    "activities": "safari, hiking, swimming",
+    "travel_companions": "freinds",
+    "dietary_preferences": "vegetarian",
+    "transportation": "car",
+    "accommodation": "motel",
+    "adventure_activities": "hiking, swimming",
+    "pace": "fast",
+    "cultural_exploration": "high",
+    "specific_landmarks": "axum, lalibela, gondar",
+    "travel_style": "comfortable"
+}
