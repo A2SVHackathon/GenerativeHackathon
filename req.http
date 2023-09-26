@@ -4,8 +4,11 @@ POST {{host}}/api/v1/tasks/create_plan
 Content-Type: application/json
 
 {
-    "duration": "2-4 months",
-    "destinations": "China",
+    "duration": "4 days",
+    "destinations": [
+        "China",
+        "Japan"
+    ],
     "interests": [
         "Hiking",
         "Trekking",
